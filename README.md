@@ -1,4 +1,4 @@
-#Effecient Implemementation of Mean Shift Algorithm on Multi-Core Heterogeneous Computing Platform
+# Effecient Implemementation of Mean Shift Algorithm on Multi-Core Heterogeneous Computing Platform
 
 
 ## Introduction
@@ -8,7 +8,7 @@ tracking must meet real time constraints ensuring all computations are completed
 
 This is an group assignment for the course 'Embedded System Lab' taught at TU Delft. See PDF for more details.
 
-##Instructions
+## Instructions
 
 * The entry point is the main function inside gpp_main.cpp in the gpp folder.
 
