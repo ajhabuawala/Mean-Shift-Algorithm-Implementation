@@ -1,0 +1,65 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="\example\dotprod\"
+ProjectType=Executable
+CPUFamily=TMS320C64XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Inline"
+Config="Lib_RAM_tables"
+Config="Lib_ROM_tables"
+
+[Source Files]
+Source="..\..\lib\iqmath_c64x+.lib"
+Source="..\..\lib\iqmath_ram_c64x+.lib"
+Source="..\..\lib\iqmath_rom_c643x.lib"
+Source="dotprod_IQ_c.c"
+Source="dotprod_IQ_d.c"
+Source="tsc_h.asm"
+Source="dotprod_IQ.cmd"
+
+["Compiler" Settings: "Inline"]
+Options=-k -o3 -fr"$(Proj_dir)\Inline" -fs"$(Proj_dir)\Inline" -ft"$(Proj_dir)\Inline" -fb"$(Proj_dir)\Inline" -i"../../include/" -d"_INLINE_IQMATH" -mt -mw -mh -mi -mv6400+
+
+["Compiler" Settings: "Lib_RAM_tables"]
+Options=-k -o3 -fr"$(Proj_dir)\Lib_RAM" -fs"$(Proj_dir)\Lib_RAM" -ft"$(Proj_dir)\Lib_RAM" -fb"$(Proj_dir)\Lib_RAM" -i"../../include/" -mt -mw -mh -mi -mv6400+
+
+["Compiler" Settings: "Lib_ROM_tables"]
+Options=-k -o3 -fr"$(Proj_dir)\Lib_ROM" -fs"$(Proj_dir)\Lib_ROM" -ft"$(Proj_dir)\Lib_ROM" -fb"$(Proj_dir)\Lib_ROM" -i"../../include/" -mt -mw -mh -mi -mv6400+
+
+["Linker" Settings: "Inline"]
+Options=-c -m".\Inline\dotprod_IQ.map" -o".\Inline\dotprod_IQ.out" -w -x
+
+["Linker" Settings: "Lib_RAM_tables"]
+Options=-c -m".\Lib_RAM_tables\dotprod_IQ.map" -o".\Lib_RAM_tables\dotprod_IQ.out" -w -x
+
+["Linker" Settings: "Lib_ROM_tables"]
+Options=-c -m".\Lib_ROM_tables\dotprod_IQ.map" -o".\Lib_ROM_tables\dotprod_IQ.out" -w -x
+
+["..\..\lib\iqmath_c64x+.lib" Settings: "Inline"]
+ExcludeFromBuild=true
+
+["..\..\lib\iqmath_ram_c64x+.lib" Settings: "Inline"]
+ExcludeFromBuild=true
+
+["..\..\lib\iqmath_ram_c64x+.lib" Settings: "Lib_ROM_tables"]
+ExcludeFromBuild=true
+
+["..\..\lib\iqmath_rom_c643x.lib" Settings: "Inline"]
+ExcludeFromBuild=true
+
+["..\..\lib\iqmath_rom_c643x.lib" Settings: "Lib_RAM_tables"]
+ExcludeFromBuild=true
+
+["dotprod_IQ.cmd" Settings: "Inline"]
+LinkOrder=1
+
+["dotprod_IQ.cmd" Settings: "Lib_RAM_tables"]
+LinkOrder=1
+
+["dotprod_IQ.cmd" Settings: "Lib_ROM_tables"]
+LinkOrder=1
+

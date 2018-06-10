@@ -1,0 +1,81 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.3\c64plus\IQmath_v213\example\FFT_IQbenchmark\"
+ProjectType=Executable
+CPUFamily=TMS320C64XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Tool="XDC"
+Config="Debug"
+Config="Inline"
+Config="Release"
+
+[Source Files]
+Source="..\..\lib\iqmath_c64x+.lib"
+Source="..\..\lib\iqmath_ram_c64x+.lib"
+Source="bmrksrc\FFTComplex_float.c"
+Source="bmrksrc\FFTComplex_float_init.c"
+Source="bmrksrc\FFTComplex_IQ.c"
+Source="bmrksrc\FFTComplex_IQ_init.c"
+Source="bmrksrc\FFTComplex_IQ_inline.asm"
+Source="bmrksrc\MAGComplex_float.c"
+Source="bmrksrc\MAGComplex_IQ.c"
+Source="bmrksrc\MAGComplex_IQ_inline.asm"
+Source="bmrksrc\PHASEComplex_float.c"
+Source="bmrksrc\PHASEComplex_IQ.c"
+Source="bmrksrc\PHASEComplex_IQ_inline.asm"
+Source="fft_IQ_d.c"
+Source="tsc_h.asm"
+Source="fft_IQ.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -k -fr"$(Proj_dir)\Debug" -fs"$(Proj_dir)\Debug" -ft"$(Proj_dir)\Debug" -fb"$(Proj_dir)\Debug" -i"../../include/" -i"../../../include/" -i"../bmrksrc" -d"GLOBAL_Q=21" -d"MATH_TYPE=IQ_MATH" -d"DEBUG" -mw -mh -mi -mv6400+
+
+["Compiler" Settings: "Inline"]
+Options=-k -o3 -fr"$(Proj_dir)\Inline" -fs"$(Proj_dir)\Inline" -ft"$(Proj_dir)\Inline" -fb"$(Proj_dir)\Inline" -i"../../include/" -i"../../../include/" -i"../bmrksrc" -d"GLOBAL_Q=21" -d"MATH_TYPE=IQ_MATH" -mw -mh -mi -mf5 -mv6400+
+
+["Compiler" Settings: "Release"]
+Options=-k -o3 -fr"$(Proj_dir)\Release" -fs"$(Proj_dir)\Release" -ft"$(Proj_dir)\Release" -fb"$(Proj_dir)\Release" -i"../../include/" -i"../../../include/" -i"../bmrksrc" -d"GLOBAL_Q=21" -d"MATH_TYPE=IQ_MATH" -mw -mh -mi -mf5 -mv6400+
+
+["Linker" Settings: "Debug"]
+Options=-c -m".\Debug\fft_IQ.map" -o".\Debug\fft_IQ.out" -w -x
+
+["Linker" Settings: "Inline"]
+Options=-c -m".\Inline\fft_IQ.map" -o".\Inline\fft_IQ.out" -w -x
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\fft_IQ.map" -o".\Release\fft_IQ.out" -w -x
+
+["bmrksrc\FFTComplex_IQ.c" Settings: "Inline"]
+ExcludeFromBuild=true
+
+["bmrksrc\FFTComplex_IQ_inline.asm" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["bmrksrc\FFTComplex_IQ_inline.asm" Settings: "Release"]
+ExcludeFromBuild=true
+
+["bmrksrc\MAGComplex_IQ.c" Settings: "Inline"]
+ExcludeFromBuild=true
+
+["bmrksrc\MAGComplex_IQ_inline.asm" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["bmrksrc\MAGComplex_IQ_inline.asm" Settings: "Release"]
+ExcludeFromBuild=true
+
+["bmrksrc\PHASEComplex_IQ.c" Settings: "Inline"]
+ExcludeFromBuild=true
+
+["bmrksrc\PHASEComplex_IQ_inline.asm" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["bmrksrc\PHASEComplex_IQ_inline.asm" Settings: "Release"]
+ExcludeFromBuild=true
+
+["fft_IQ.cmd" Settings: "Inline"]
+LinkOrder=1
+

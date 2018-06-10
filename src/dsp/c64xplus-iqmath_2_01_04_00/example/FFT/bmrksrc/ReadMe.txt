@@ -1,0 +1,1 @@
+The ASM files provided in this folders were created by compiling the corresponding C code and enabling inlining. Some of the IQMath APIs that were inlined are not provided in source form (in the release) and thus, the generated ASM files are provided so that users can get the max performance for the IQMath FFT kernel

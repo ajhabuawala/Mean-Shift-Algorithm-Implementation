@@ -1,0 +1,48 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.3\c64plus\IQmath_v213\example\FIR_IQbenchmark\"
+ProjectType=Executable
+CPUFamily=TMS320C64XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Tool="XDC"
+Config="Debug"
+Config="Inline"
+Config="Release"
+
+[Source Files]
+Source="..\..\lib\IQmath_c64x+.lib"
+Source="..\..\lib\IQmath_RAM_c64x+.lib"
+Source="bmrksrc\FIRComplex_float.c"
+Source="bmrksrc\FIRComplex_IQ.c"
+Source="fir_IQ_d.c"
+Source="tsc_h.asm"
+Source="fir_IQ.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -k -fr"$(Proj_dir)\Debug" -fs"$(Proj_dir)\Debug" -ft"$(Proj_dir)\Debug" -fb"$(Proj_dir)\Debug" -i"../../include/" -i"../../../include/" -i"../bmrksrc" -d"MATH_TYPE=IQ_MATH" -d"DEBUG" -d"GLOBAL_Q=27" -mw -mh -mi -mv6400+
+
+["Compiler" Settings: "Inline"]
+Options=-k -o3 -fr"$(Proj_dir)\Inline" -fs"$(Proj_dir)\Inline" -ft"$(Proj_dir)\Inline" -fb"$(Proj_dir)\Inline" -i"../../include/" -i"../../../include/" -i"../bmrksrc" -d"MATH_TYPE=IQ_MATH" -d"_INLINE_IQMATH" -d"GLOBAL_Q=27" -mw -mh -mi -mf5 -mv6400+
+
+["Compiler" Settings: "Release"]
+Options=-k -o3 -fr"$(Proj_dir)\Release" -fs"$(Proj_dir)\Release" -ft"$(Proj_dir)\Release" -fb"$(Proj_dir)\Release" -i"../../include/" -i"../../../include/" -i"../bmrksrc" -d"MATH_TYPE=IQ_MATH" -d"GLOBAL_Q=27" -mw -mh -mi -mf5 -mv6400+
+
+["Linker" Settings: "Debug"]
+Options=-c -m".\Debug\fir_IQ.map" -o".\Debug\fir_IQ.out" -w -x
+
+["Linker" Settings: "Inline"]
+Options=-c -m".\Inline\fir_IQ.map" -o".\Inline\fir_IQ.out" -w -x
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\fir_IQ.map" -o".\Release\fir_IQ.out" -w -x
+
+["fir_IQ.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["fir_IQ.cmd" Settings: "Release"]
+LinkOrder=1
+

@@ -1,0 +1,200 @@
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+Error using imread>get_full_filename (line 481)
+File "image_1.jpg" does not exist.
+
+Error in imread (line 344)
+    filename = get_full_filename(fid, errmsg, filename);
+ 
+>> clscr
+Undefined function or variable 'clscr'.
+ 
+>> clrscr
+Undefined function or variable 'clrscr'.
+ 
+>> clsscr
+Undefined function or variable 'clsscr'.
+ 
+>> clr
+Undefined function or variable 'clr'.
+ 
+Did you mean:
+>> clfclea
+>> clearscr
+Undefined function or variable 'clearscr'.
+ 
+>> cls
+Undefined function or variable 'cls'.
+ 
+>> clear
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+MEvent. CASE!
+
+meanval =
+
+   51.6929
+
+
+meanval =
+
+   51.6691
+
+
+meanval =
+
+   51.6825
+
+
+meanval =
+
+   51.6739
+
+
+meanval =
+
+   51.6228
+
+
+meanval =
+
+   51.5167
+
+
+meanval =
+
+   51.5131
+
+
+meanval =
+
+   51.4704
+
+
+meanval =
+
+   51.0134
+
+
+meanval =
+
+   50.9191
+
+
+meanval =
+
+   50.9378
+
+
+meanval =
+
+   50.9409
+
+
+meanval =
+
+   50.9012
+
+
+meanval =
+
+   50.8850
+
+
+meanval =
+
+   50.8348
+
+
+meanval =
+
+   50.8331
+
+
+meanval =
+
+   51.0475
+
+
+meanval =
+
+   50.9268
+
+
+meanval =
+
+   50.9262
+
+
+meanval =
+
+   50.9108
+
+
+meanval =
+
+   50.9178
+
+
+meanval =
+
+   50.9213
+
+
+meanval =
+
+   50.9530
+
+
+meanval =
+
+   50.9493
+
+
+meanval =
+
+   51.0135
+
+
+meanval =
+
+   50.9095
+
+
+meanval =
+
+   50.8782
+
+
+meanval =
+
+   50.8837
+
+
+meanval =
+
+   50.8550
+
+
+meanval =
+
+   50.8440
+
+
+meanval =
+
+   50.8811
+
+
+meanval =
+
+   50.8829
+
+>> 
